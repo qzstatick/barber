@@ -1,5 +1,7 @@
 # Barber Project
 
+[ТЗ](https://github.com/qzstatick/barber/issues/6#issue-4944803189)
+
 A full-stack application with NestJS backend, React frontend, and PostgreSQL database.
 
 ## 🏗️ Project Structure
