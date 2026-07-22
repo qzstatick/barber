@@ -1,0 +1,71 @@
+name: barber
+description: "Мобильное приложение для парикмахерской. Система управления записями, услугами и мастерами."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI и дизайн
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.7
+  google_fonts: ^6.1.0
+  
+  # State Management
+  provider: ^6.0.0
+  
+  # Маршрутизация
+  go_router: ^12.0.0
+  
+  # Работа с датой/временем
+  intl: ^0.19.0
+  table_calendar: ^3.0.9
+  
+  # Локальное хранилище
+  shared_preferences: ^2.2.0
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  
+  # API и сеть
+  http: ^1.1.0
+  dio: ^5.3.0
+  
+  # JSON сериализация
+  json_annotation: ^4.8.0
+  
+  # Валидация
+  validators: ^3.0.0
+  
+  # Уведомления
+  flutter_local_notifications: ^16.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.0
+  json_serializable: ^6.7.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
+          weight: 600
