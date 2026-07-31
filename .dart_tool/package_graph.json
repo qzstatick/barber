@@ -638,7 +638,7 @@
     },
     {
       "name": "vector_graphics",
-      "version": "1.2.2",
+      "version": "1.2.3",
       "dependencies": [
         "flutter",
         "http",
@@ -728,7 +728,7 @@
       ]
     },
     {
-      "name": "package_config",
+-      "name": "package_config",
       "version": "2.2.0",
       "dependencies": [
         "path"
@@ -761,6 +761,13 @@
         "glob",
         "logging",
         "package_config",
+        "path"
+      ]
+    },
+    {
+      "name": "package_config",
+      "version": "2.2.0",
+      "dependencies": [
         "path"
       ]
     },

@@ -651,9 +651,9 @@
     },
     {
       "name": "vector_graphics",
-      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/vector_graphics-1.2.2",
+      "rootUri": "file:///home/codespace/.pub-cache/hosted/pub.dev/vector_graphics-1.2.3",
       "packageUri": "lib/",
-      "languageVersion": "3.9"
+      "languageVersion": "3.10"
     },
     {
       "name": "vector_graphics_codec",

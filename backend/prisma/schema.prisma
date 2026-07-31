@@ -1,0 +1,62 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  name      String?
+  role      String    @default("customer")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  bookings  Booking[]
+  reviews   Review[]
+}
+
+model Barber {
+  id        String    @id @default(uuid())
+  name      String    @unique
+  bio       String?
+  rating    Float?
+  services  Service[]
+  reviews   Review[]
+}
+
+model Service {
+  id             String   @id @default(uuid())
+  name           String
+  description    String?
+  price          Float
+  durationMinutes Int
+  barber         Barber   @relation(fields: [barberId], references: [id])
+  barberId       String
+}
+
+model Booking {
+  id         String   @id @default(uuid())
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  barber     Barber   @relation(fields: [barberId], references: [id])
+  barberId   String
+  service    Service  @relation(fields: [serviceId], references: [id])
+  serviceId  String
+  startAt    DateTime
+  status     String   @default("pending")
+  createdAt  DateTime @default(now())
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  rating    Int
+  comment   String?
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  barber    Barber   @relation(fields: [barberId], references: [id])
+  barberId  String
+  createdAt DateTime @default(now())
+}

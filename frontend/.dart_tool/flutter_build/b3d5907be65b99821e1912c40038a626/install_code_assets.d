@@ -1,0 +1,1 @@
+ /workspaces/barber/frontend/.dart_tool/flutter_build/b3d5907be65b99821e1912c40038a626/native_assets.json: 
