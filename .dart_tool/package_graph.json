@@ -728,6 +728,13 @@
       ]
     },
     {
+-      "name": "package_config",
+      "version": "2.2.0",
+      "dependencies": [
+        "path"
+      ]
+    },
+    {
       "name": "source_helper",
       "version": "1.3.13",
       "dependencies": [
